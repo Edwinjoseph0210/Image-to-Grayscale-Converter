@@ -1,1 +1,1 @@
-# Image-to-Grayscale-Converter
+# Image-to-Grayscale-Converter-Using-MATLAB

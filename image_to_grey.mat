@@ -1,0 +1,22 @@
+% image_to_grayscale.m
+
+clc; clear;
+
+[file, path] = uigetfile({'*.jpg;*.png;*.bmp','Image Files'});
+if isequal(file,0)
+    disp('User canceled.');
+    return;
+end
+
+img = imread(fullfile(path, file));
+
+gray_img = rgb2gray(img);
+
+imshow(gray_img);
+title('Grayscale Image');
+
+% Save output
+[~, name, ~] = fileparts(file);
+imwrite(gray_img, [path, name, '_grayscale.png']);
+
+disp('Grayscale image saved.');
